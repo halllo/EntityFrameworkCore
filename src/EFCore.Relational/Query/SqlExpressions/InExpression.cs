@@ -25,6 +25,12 @@ namespace Microsoft.EntityFrameworkCore.Query.SqlExpressions
             RelationalTypeMapping typeMapping)
             : base(typeof(bool), typeMapping)
         {
+            if (values != null
+                && subquery != null)
+            {
+                throw new ArgumentException($"Either {nameof(values)} or {nameof(subquery)} must be null");
+            }
+
             Item = item;
             IsNegated = negated;
             Subquery = subquery;
