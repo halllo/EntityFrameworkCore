@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Microsoft.EntityFrameworkCore.TestUtilities
 {
-    public class TestSimpleLogger : ISimpleLogger
+    public class TestLogToLogger : ILogToLogger
     {
         public LogLevel? LoggedAt { get; set; }
         public EventId LoggedEvent { get; set; }

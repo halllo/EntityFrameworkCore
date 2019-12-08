@@ -222,7 +222,7 @@ namespace Microsoft.EntityFrameworkCore.Infrastructure
                 options,
                 new DiagnosticListener("Fake"),
                 TestHelpers.LoggingDefinitions,
-                new NullSimpleLogger());
+                new NullLogToLogger());
         }
 
         protected DiagnosticsLogger<DbLoggerCategory.Model> CreateModelLogger(bool sensitiveDataLoggingEnabled = false)
@@ -234,7 +234,7 @@ namespace Microsoft.EntityFrameworkCore.Infrastructure
                 options,
                 new DiagnosticListener("Fake"),
                 TestHelpers.LoggingDefinitions,
-                new NullSimpleLogger());
+                new NullLogToLogger());
         }
 
         protected virtual ModelBuilder CreateConventionalModelBuilder(bool sensitiveDataLoggingEnabled = false)

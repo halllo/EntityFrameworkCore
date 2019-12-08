@@ -28,7 +28,7 @@ namespace Microsoft.EntityFrameworkCore.TestUtilities
                 .AddSingleton<ValueConverterSelectorDependencies>()
                 .AddSingleton<DiagnosticSource>(new DiagnosticListener(DbLoggerCategory.Name))
                 .AddSingleton<ILoggingOptions, LoggingOptions>()
-                .AddSingleton<ISimpleLogger, NullSimpleLogger>()
+                .AddSingleton<ILogToLogger, NullLogToLogger>()
                 .AddSingleton<LoggingDefinitions, SqliteLoggingDefinitions>()
                 .AddSingleton(typeof(IDiagnosticsLogger<>), typeof(DiagnosticsLogger<>))
                 .AddSingleton<IValueConverterSelector, ValueConverterSelector>()

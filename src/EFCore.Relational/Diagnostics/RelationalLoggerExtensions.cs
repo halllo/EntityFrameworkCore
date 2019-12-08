@@ -2217,7 +2217,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
 
             if (simpleLogEnabled)
             {
-                diagnostics.SimpleLogger.Log(eventData);
+                diagnostics.LogToLogger.Log(eventData);
             }
 
             return eventData;

@@ -49,9 +49,9 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         DiagnosticSource DiagnosticSource { get; }
 
         /// <summary>
-        ///     The <see cref="ISimpleLogger" />.
+        ///     The <see cref="ILogToLogger" />.
         /// </summary>
-        ISimpleLogger SimpleLogger { get; }
+        ILogToLogger LogToLogger { get; }
 
         /// <summary>
         ///     Holds registered interceptors, if any.
